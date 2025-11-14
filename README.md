@@ -8,6 +8,9 @@
 
 ![](charts/calendar_heatmap.png)
 
+## 历年成交
+
+![](charts/yearly_total.png)
 
 ## 数据总览
 
