@@ -27,3 +27,7 @@
 因为商业车位拉低了均价，具体数值意义不大，主要看趋势
 
 ![](charts/price_trend.png)
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=jozhn/shanghai-house-data-view&type=date&legend=top-left)](https://www.star-history.com/#jozhn/shanghai-house-data-view&type=date&legend=top-left)
