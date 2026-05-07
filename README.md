@@ -16,6 +16,12 @@
 
 ![](charts/dashboard.png)
 
+## 最近3个月同比
+
+![](reports/q1-overview-2026-vs-2025.png)
+
+![](reports/monthly-compare-2026-vs-2025.png)
+
 ## 月度成交趋势
 
 ![](charts/trend_combo.png)

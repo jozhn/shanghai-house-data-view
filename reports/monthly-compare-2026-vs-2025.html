@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>上海二手房2-4月对比</title>
+  <style>
+    :root {
+      --bg: #F7F1E8; --panel: #FBF7F1; --panel-soft: #F3EDE3; --ink: #181818;
+      --muted: #8C8176; --line: #E5D9C9; --base: #5A77F0; --compare: #C18E45;
+      --up: #E25F57; --down: #2E9561; --flat: #8C8176;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; color: var(--ink); font-family: "Noto Sans SC", sans-serif;
+      padding: 24px 12px; background: var(--bg);
+    }
+    .poster {
+      width: min(980px, calc(100vw - 24px)); margin: 0 auto; padding: 44px 40px 32px; background: var(--bg);
+    }
+    .page-head { margin-bottom: 28px; }
+    .page-head h1 { margin: 0; font-size: clamp(42px, 7vw, 76px); line-height: 1.08; font-weight: 900; letter-spacing: -0.03em; }
+    .page-subtitle { margin: 18px 0 0; font-size: 18px; color: var(--muted); }
+    .note-pill {
+      display: inline-flex; margin-top: 22px; padding: 13px 20px; border-radius: 18px;
+      background: #FFE7AF; color: #AA6A05; font-size: 16px; font-weight: 500;
+    }
+    .card {
+      background: var(--panel); border-radius: 32px; padding: 28px 28px 14px;
+      box-shadow: inset 0 0 0 1px rgba(229, 217, 201, 0.55);
+    }
+    .overview-row + .overview-row, .group + .group { border-top: 1px solid var(--line); }
+    .overview-row { padding: 22px 6px; }
+    .overview-row__title { margin: 0 0 18px; font-size: 28px; font-weight: 900; }
+    .overview-grid {
+      display: grid; grid-template-columns: 1fr 1fr auto; gap: 18px; align-items: end;
+    }
+    .overview-col__label, .metric-name, .month-name {
+      display: block; font-size: 15px; color: var(--muted); font-weight: 500;
+    }
+    .table-head span {
+      display: block; font-size: 28px; color: var(--muted); font-weight: 900;
+    }
+    .overview-col__value { display: block; margin-top: 10px; font-size: 56px; line-height: 1; font-weight: 900; }
+    .value-base { color: var(--base); }
+    .value-compare { color: var(--compare); }
+    .value-yoy { text-align: right; }
+    .delta { font-weight: 900; }
+    .delta--up { color: var(--up); }
+    .delta--down { color: var(--down); }
+    .delta--flat { color: var(--flat); }
+    .simple-table { width: 100%; border-collapse: separate; border-spacing: 0 14px; }
+    .table-head {
+      display: grid; grid-template-columns: 190px 1fr 1fr 160px; gap: 16px; padding: 4px 0 12px;
+    }
+    .group { padding: 24px 0 10px; }
+    .group-title { margin: 0 0 18px; font-size: 28px; font-weight: 900; }
+    .month-row {
+      display: grid; grid-template-columns: 190px 1fr 1fr 160px; gap: 16px; align-items: center;
+      padding: 12px 0;
+    }
+    .month-name { font-size: 28px; color: var(--ink); font-weight: 900; }
+    .number-box {
+      min-height: 92px; padding: 18px 20px; border-radius: 20px; background: var(--panel-soft);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .number-box strong { font-size: 44px; line-height: 1; font-weight: 900; }
+    .yoy-box { text-align: right; font-size: 42px; line-height: 1; font-weight: 900; }
+    .page-footer { margin-top: 18px; font-size: 14px; color: var(--muted); }
+    @media (max-width: 980px) {
+      .poster { padding: 28px 24px; }
+      .overview-grid, .table-head, .month-row { grid-template-columns: 1fr; }
+      .value-yoy, .yoy-box { text-align: left; }
+      .overview-col__value { font-size: 44px; }
+      .number-box strong, .yoy-box { font-size: 36px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <header class="page-head">
+      <h1>上海二手房2-4月对比</h1>
+      <p class="page-subtitle">2025年2-4月 vs 2026年2-4月</p>
+      <div class="note-pill">2-4月数据按最新口径统计</div>
+    </header>
+    
+      <section class="card">
+        <div class="table-head">
+          <span>指标</span>
+          <span>2025年2-4月</span>
+          <span>2026年2-4月</span>
+          <span style="text-align:right;">同比</span>
+        </div>
+        <section class="group"><h2 class="group-title">交易套数</h2>
+                <div class="month-row">
+                  <div class="month-name">2月</div>
+                  <div class="number-box"><strong class="value-base">16,742</strong></div>
+                  <div class="number-box"><strong class="value-compare">11,315</strong></div>
+                  <div class="yoy-box delta delta--down">-32.4%</div>
+                </div>
+                
+                <div class="month-row">
+                  <div class="month-name">3月</div>
+                  <div class="number-box"><strong class="value-base">29,369</strong></div>
+                  <div class="number-box"><strong class="value-compare">31,215</strong></div>
+                  <div class="yoy-box delta delta--up">+6.3%</div>
+                </div>
+                
+                <div class="month-row">
+                  <div class="month-name">4月</div>
+                  <div class="number-box"><strong class="value-base">23,416</strong></div>
+                  <div class="number-box"><strong class="value-compare">28,742</strong></div>
+                  <div class="yoy-box delta delta--up">+22.7%</div>
+                </div>
+                </section>
+        <section class="group"><h2 class="group-title">成交面积（万㎡）</h2>
+                <div class="month-row">
+                  <div class="month-name">2月</div>
+                  <div class="number-box"><strong class="value-base">135.0</strong></div>
+                  <div class="number-box"><strong class="value-compare">92.2</strong></div>
+                  <div class="yoy-box delta delta--down">-31.7%</div>
+                </div>
+                
+                <div class="month-row">
+                  <div class="month-name">3月</div>
+                  <div class="number-box"><strong class="value-base">238.9</strong></div>
+                  <div class="number-box"><strong class="value-compare">246.6</strong></div>
+                  <div class="yoy-box delta delta--up">+3.2%</div>
+                </div>
+                
+                <div class="month-row">
+                  <div class="month-name">4月</div>
+                  <div class="number-box"><strong class="value-base">192.4</strong></div>
+                  <div class="number-box"><strong class="value-compare">231.4</strong></div>
+                  <div class="yoy-box delta delta--up">+20.3%</div>
+                </div>
+                </section>
+        <section class="group"><h2 class="group-title">成交金额（亿元）</h2>
+                <div class="month-row">
+                  <div class="month-name">2月</div>
+                  <div class="number-box"><strong class="value-base">519.1</strong></div>
+                  <div class="number-box"><strong class="value-compare">311.1</strong></div>
+                  <div class="yoy-box delta delta--down">-40.1%</div>
+                </div>
+                
+                <div class="month-row">
+                  <div class="month-name">3月</div>
+                  <div class="number-box"><strong class="value-base">952.9</strong></div>
+                  <div class="number-box"><strong class="value-compare">816.4</strong></div>
+                  <div class="yoy-box delta delta--down">-14.3%</div>
+                </div>
+                
+                <div class="month-row">
+                  <div class="month-name">4月</div>
+                  <div class="number-box"><strong class="value-base">750.9</strong></div>
+                  <div class="number-box"><strong class="value-compare">781.8</strong></div>
+                  <div class="yoy-box delta delta--up">+4.1%</div>
+                </div>
+                </section>
+      </section>
+    
+    <footer class="page-footer"><p>数据来源：上海网上房地产</p></footer>
+  </main>
+</body>
+</html>
